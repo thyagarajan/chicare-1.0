@@ -1,0 +1,28 @@
+<h1>Editing immuniasation</h1>
+
+<% form_for(@immuniasation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name_en %><br />
+    <%= f.text_field :name_en %>
+  </p>
+  <p>
+    <%= f.label :name_ta %><br />
+    <%= f.text_field :name_ta %>
+  </p>
+  <p>
+    <%= f.label :days %><br />
+    <%= f.text_field :days %>
+  </p>
+  <p>
+    <%= f.label :range %><br />
+    <%= f.text_field :range %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @immuniasation %> |
+<%= link_to 'Back', immuniasations_path %>

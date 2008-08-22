@@ -1,0 +1,26 @@
+<h1>Listing immuniasations</h1>
+
+<table>
+  <tr>
+    <th>Name en</th>
+    <th>Name ta</th>
+    <th>Days</th>
+    <th>Range</th>
+  </tr>
+
+<% for immuniasation in @immuniasations %>
+  <tr>
+    <td><%=h immuniasation.name_en %></td>
+    <td><%=h immuniasation.name_ta %></td>
+    <td><%=h immuniasation.days %></td>
+    <td><%=h immuniasation.range %></td>
+    <td><%= link_to 'Show', immuniasation %></td>
+    <td><%= link_to 'Edit', edit_immuniasation_path(immuniasation) %></td>
+    <td><%= link_to 'Destroy', immuniasation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New immuniasation', new_immuniasation_path %>
